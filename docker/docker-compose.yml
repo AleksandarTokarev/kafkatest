@@ -56,6 +56,10 @@ services:
       - 5432:5432
     volumes:
       - dbdata:/var/lib/postgresql/data
+  mongo:
+    ports:
+      - '27017:27017'
+    image: mongo:latest
 volumes:
   dbdata:
     driver: local
