@@ -6,9 +6,9 @@ import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Component;
 
 @Component
-class KafkaListenersExample {
+class KafkaListenerExample {
 
-    Logger LOG = LoggerFactory.getLogger(KafkaListenersExample.class);
+    Logger LOG = LoggerFactory.getLogger(KafkaListenerExample.class);
 
     @KafkaListener(topics = "#{@redisDynamicTopic.whichTopicToUse()}")
     void listener(String data) {
